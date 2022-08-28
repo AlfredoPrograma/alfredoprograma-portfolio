@@ -13,10 +13,14 @@
   color: colors.$primary;
   border-bottom: 2px solid transparent;
   transition: color, border-color 0.2s;
-  font-size: fonts.$medium;
 
   &:hover { @include changeColorLink() }
 }
 
 .active { @include changeColorLink() }
 
+@media screen and (min-width: breakpoints.$tablet) {
+  .navLink {
+    font-size: fonts.$medium;
+  }
+}

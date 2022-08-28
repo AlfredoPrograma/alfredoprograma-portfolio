@@ -1,26 +1,26 @@
 import Button from 'components/shared/Button/Button'
 import styles from './HomePage.module.scss'
-import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import { AnimatePageLayout } from 'layouts/AnimatePageLayout'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const HomePage = () => {
+  const { push } = useRouter()
+
   return (
     <AnimatePageLayout>
       <div className={styles.page}>
         <section className={styles.meetMeSection}>
           <div className={styles.meetMeText}>
-            <h2 className={styles.description}>Hey there! My name is</h2>
-            <h1 className={styles.title}>Alfredo Arvelaez</h1>
             <h2 className={styles.description}>
-              I&apos;m modern Full-Stack web developer
+              👋 Hey there! My name is Alfredo Arvelaez and I&apos;m
             </h2>
+            <h1 className={styles.title}>Full-Stack Developer</h1>
           </div>
 
           <div>
             <Button
-              rightIcon={<ArrowLongRightIcon width={28} />}
-              onClick={() => console.log('hello world')}
+              onClick={() => push('/about-me')}
               variant="primary"
               extraStyles={styles.meetMeButton}
             >
