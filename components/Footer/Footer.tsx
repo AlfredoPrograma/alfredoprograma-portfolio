@@ -10,7 +10,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyrightWrapper}>
-        <i className="bi bi-github"></i>
         &copy; 2022. Developed by me with a lot of ☕ and 💙
       </div>
 
