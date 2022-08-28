@@ -1,5 +1,11 @@
+import { AnimatePageLayout } from 'layouts/AnimatePageLayout'
+
 const ContactPage = () => {
-  return <div>Contact page</div>
+  return (
+    <AnimatePageLayout>
+      <div>Contact page</div>
+    </AnimatePageLayout>
+  )
 }
 
 export { ContactPage }

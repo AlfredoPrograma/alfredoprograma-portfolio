@@ -1,4 +1,5 @@
 import { NavBar } from 'components/NavBar'
+import { AnimatePresence } from 'framer-motion'
 import styles from './MainLayout.module.scss'
 
 interface MainLayoutProps {
@@ -10,7 +11,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <div className={styles.layoutWrapper}>
       <NavBar />
 
-      <main className={styles.main}>{children}</main>
+      <AnimatePresence>
+        <main className={styles.main}>{children}</main>
+      </AnimatePresence>
     </div>
   )
 }

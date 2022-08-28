@@ -1,5 +1,11 @@
+import { AnimatePageLayout } from 'layouts/AnimatePageLayout'
+
 const AboutMePage = () => {
-  return <div>AboutMePage</div>
+  return (
+    <AnimatePageLayout>
+      <div>About me page</div>
+    </AnimatePageLayout>
+  )
 }
 
 export { AboutMePage }

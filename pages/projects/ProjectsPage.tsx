@@ -1,4 +1,10 @@
+import { AnimatePageLayout } from 'layouts/AnimatePageLayout'
+
 const ProjectsPage = () => {
-  return <div>ProjectsPage</div>
+  return (
+    <AnimatePageLayout>
+      <div>Projects page</div>
+    </AnimatePageLayout>
+  )
 }
 export { ProjectsPage }
