@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer'
 import { NavBar } from 'components/NavBar'
 import { AnimatePresence } from 'framer-motion'
 import styles from './MainLayout.module.scss'
@@ -14,6 +15,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <AnimatePresence>
         <main className={styles.main}>{children}</main>
       </AnimatePresence>
+
+      <Footer />
     </div>
   )
 }

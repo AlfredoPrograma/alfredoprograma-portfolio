@@ -1,0 +1,32 @@
+@use 'styles/colors' as colors;
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+
+  .socialMediaWrapper {
+    display: flex;
+    gap: 1.5rem;
+
+    .iconWrapper {
+      & > svg > path {
+        transition: color 0.2s;
+      }
+
+      &:hover {
+       & > svg > path {
+          color: colors.$primary-medium;
+        }
+      }
+
+      .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+  }
+}
+
