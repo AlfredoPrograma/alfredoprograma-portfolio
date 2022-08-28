@@ -1,0 +1,20 @@
+@use 'styles/colors' as colors;
+@use 'styles/breakpoints' as breakpoints;
+
+@mixin changeColorLink {
+  color: colors.$primary-medium;
+  border-color: colors.$primary-medium;
+}
+
+.navLink {
+  font-weight: 600;
+  text-decoration: none;
+  color: colors.$primary;
+  border-bottom: 2px solid transparent;
+  transition: color, border-color 0.2s;
+
+  &:hover { @include changeColorLink() }
+}
+
+.active { @include changeColorLink() }
+

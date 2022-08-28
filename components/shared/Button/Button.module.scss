@@ -1,0 +1,56 @@
+@use 'styles/colors' as colors;
+@use 'styles/fonts' as fonts;
+@use 'styles/shadows' as shadows;
+
+.button {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: fonts.$bold;
+  box-shadow: shadows.$normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button > svg > path {
+  transition: all 0.2s;
+}
+
+.primary {
+  background-color: colors.$primary;
+  color: colors.$white;
+
+  & > svg > path {
+    color: colors.$white;
+  }
+
+  &:hover {
+    background-color: colors.$primary-medium;
+  }
+}
+
+.secondary {
+  background-color: colors.$white;
+  color: colors.$primary;
+  border-color: colors.$primary;
+
+  & > svg > path {
+    color: colors.$primary;
+  }
+  
+  &:hover {
+    color: colors.$primary-medium;
+    border-color: colors.$primary-medium;
+
+    & > svg > path {
+      color: colors.$primary-medium;
+    }
+  }
+
+  
+}
