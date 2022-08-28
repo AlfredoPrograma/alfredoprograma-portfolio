@@ -2,6 +2,7 @@ import Button from 'components/shared/Button/Button'
 import styles from './HomePage.module.scss'
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 import { AnimatePageLayout } from 'layouts/AnimatePageLayout'
+import Image from 'next/image'
 
 const HomePage = () => {
   return (
@@ -20,12 +21,20 @@ const HomePage = () => {
             <Button
               rightIcon={<ArrowLongRightIcon width={28} />}
               onClick={() => console.log('hello world')}
-              variant="secondary"
+              variant="primary"
               extraStyles={styles.meetMeButton}
             >
               Come and meet me!
             </Button>
           </div>
+        </section>
+
+        <section className={styles.imageSection}>
+          <Image
+            src={'/assets/developer.svg'}
+            layout="fill"
+            alt="main developer image"
+          />
         </section>
       </div>
     </AnimatePageLayout>

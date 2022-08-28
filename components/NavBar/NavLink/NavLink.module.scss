@@ -1,5 +1,6 @@
 @use 'styles/colors' as colors;
 @use 'styles/breakpoints' as breakpoints;
+@use 'styles/fonts' as fonts;
 
 @mixin changeColorLink {
   color: colors.$primary-medium;
@@ -12,6 +13,7 @@
   color: colors.$primary;
   border-bottom: 2px solid transparent;
   transition: color, border-color 0.2s;
+  font-size: fonts.$medium;
 
   &:hover { @include changeColorLink() }
 }
