@@ -18,11 +18,6 @@ const navBarRoutes: RouteLink[] = [
     text: 'Projects',
     to: '/projects',
   },
-
-  {
-    text: 'Contact',
-    to: '/contact',
-  },
 ]
 
 const NavBar = () => {
