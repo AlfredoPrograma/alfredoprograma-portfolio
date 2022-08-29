@@ -1,10 +1,13 @@
 @use 'styles/colors' as colors;
+@use 'styles/breakpoints' as breakpoints;
+
 
 .footer {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 
   .socialMediaWrapper {
     display: flex;
@@ -12,6 +15,7 @@
 
     .iconWrapper {
       & > svg > path {
+        color: colors.$black;
         transition: color 0.2s;
       }
 
@@ -22,11 +26,24 @@
       }
 
       .icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 1.75rem;
+        height: 1.75rem;
       }
     }
-
   }
+}
+
+@media screen and (min-width: breakpoints.$tablet) {
+  .footer {
+    .socialMediaWrapper{
+      .iconWrapper {
+        .icon {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+  
 }
 
