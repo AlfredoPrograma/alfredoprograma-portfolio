@@ -1,0 +1,86 @@
+@use 'styles/colors' as colors;
+@use 'styles/fonts' as fonts;
+@use 'styles/shadows' as shadows;
+@use 'styles/breakpoints' as breakpoints;
+
+.card {
+  width: 100%;
+  height: max-content;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid colors.$black;
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    .header {
+      
+      .title {
+        text-align: center;
+        color: colors.$primary-medium;
+        font-size: fonts.$medium;
+      }
+    }
+
+    .descriptionWrapper {
+      .description {
+        text-align: center;
+        font-size: fonts.$small;
+      }
+    }
+
+    .footer {
+      padding-top: 0.65rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-direction: column-reverse;
+
+      .tagsWrapper {
+        flex-wrap: wrap;
+        display: flex;
+        gap: 0.65rem;
+      }
+
+      .linksWrapper {
+        display: flex;
+        gap: 1rem;
+        height: 100%;
+      }
+    }
+
+
+  }
+}
+
+@media screen and (min-width: breakpoints.$tablet) {
+
+}
+
+@media screen and (min-width: breakpoints.$tablet) {
+  .card {
+    border: 2px solid colors.$black;
+    padding: 1.5rem 4rem;
+    border-radius: 8px;
+    box-shadow: shadows.$normal;
+
+    .content {
+      .header {
+        .title {
+          font-size: 2rem
+        }
+      }
+
+      .descriptionWrapper {
+        .description {
+          font-size: fonts.$medium;
+        }
+      }
+
+      .footer {
+        padding-top: 1.25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use 'styles/colors' as colors;
+@use 'styles/fonts' as fonts;
+@use 'styles/breakpoints' as breakpoints;
+
+
+
+.page {
+  width: 100%;
+}
+
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+
+  .header {
+    text-align: center;
+
+    .title {
+      font-size: fonts.$large;
+      color: colors.$primary;
+    }
+  }
+
+  .projectsList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: 100%;
+  }
+}
+
+
+@media screen and (min-width: breakpoints.$laptop)  {
+  .projectsList {
+    padding-top: 2rem;
+    margin-inline: auto;
+    width: 50%;
+
+    .header {
+      margin-block: 1rem;
+    }
+  }
+}
+
+

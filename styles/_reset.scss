@@ -1,4 +1,6 @@
 @use 'colors' as colors;
+@use 'fonts' as fonts;
+
 
 * {
   box-sizing: border-box;
@@ -14,4 +16,26 @@ html, body, #__next {
   margin: 0;
   width: 100%;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: fonts.$bold;
+  color: colors.$primary;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  
+  & * {
+    color: colors.$primary;
+  }
+
+  &:hover {
+    color: colors.$primary-medium;
+
+    & * {
+      color: colors.$primary-medium;
+    }
+  }
 }
