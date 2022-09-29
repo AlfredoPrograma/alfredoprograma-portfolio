@@ -1,6 +1,13 @@
 import { IconType } from 'react-icons'
 
-type Techs = 'react' | 'redux' | 'tailwind' | 'typescript'
+type Techs =
+  | 'react'
+  | 'redux'
+  | 'tailwind'
+  | 'typescript'
+  | 'laravel'
+  | 'postgres'
+  | 'mongo'
 
 interface TechTag {
   text: string

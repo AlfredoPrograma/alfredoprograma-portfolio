@@ -1,31 +1,30 @@
 import styles from './Footer.module.scss'
 import {
   FaGithub as GithubIcon,
-  FaInstagram as InstagramIcon,
-  FaLinkedinIn as LinkedInIcon,
+  // FaInstagram as InstagramIcon,
+  // FaLinkedinIn as LinkedInIcon,
   FaEnvelope as MailIcon,
 } from 'react-icons/fa'
-import Link from 'next/link'
 import { SocialMediaIconLink } from 'types/SocialMediaIconLink'
 
 const socialMediaLinks: SocialMediaIconLink[] = [
   {
-    to: '#',
+    to: 'https://github.com/AlfredoPrograma',
     icon: GithubIcon,
   },
 
-  {
-    to: '#',
-    icon: InstagramIcon,
-  },
+  // {
+  //   to: '#',
+  //   icon: InstagramIcon,
+  // },
+
+  // {
+  //   to: '#',
+  //   icon: LinkedInIcon,
+  // },
 
   {
-    to: '#',
-    icon: LinkedInIcon,
-  },
-
-  {
-    to: '#',
+    to: 'mailto:alfredoprograma.dev@gmail.com',
     icon: MailIcon,
   },
 ]
@@ -39,11 +38,9 @@ const Footer = () => {
 
       <div className={styles.socialMediaWrapper}>
         {socialMediaLinks.map(({ to, icon }) => (
-          <Link key={to} href={to}>
-            <a className={styles.iconWrapper}>
-              {icon({ className: styles.icon })}
-            </a>
-          </Link>
+          <a key={to} href={to} className={styles.iconWrapper}>
+            {icon({ className: styles.icon })}
+          </a>
         ))}
       </div>
     </footer>

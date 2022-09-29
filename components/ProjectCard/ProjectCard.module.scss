@@ -55,10 +55,6 @@
 }
 
 @media screen and (min-width: breakpoints.$tablet) {
-
-}
-
-@media screen and (min-width: breakpoints.$tablet) {
   .card {
     border: 2px solid colors.$black;
     padding: 1.5rem 4rem;
@@ -75,6 +71,7 @@
       .descriptionWrapper {
         .description {
           font-size: fonts.$medium;
+          line-height: 1.75rem;
         }
       }
 

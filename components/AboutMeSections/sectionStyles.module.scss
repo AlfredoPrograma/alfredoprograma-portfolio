@@ -1,0 +1,101 @@
+@use "styles/colors" as colors;
+@use 'styles/breakpoints' as breakpoints;
+
+
+.header {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: colors.$primary;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    color: colors.$primary-medium;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iconList {
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  row-gap: 2.5rem;
+  flex-wrap: wrap;
+
+  .listItem {
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+
+    & * {
+      color: inherit;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoints.$desktop) {
+  .header {
+    margin-bottom: 2rem;
+
+    h2 {
+      text-align: start;
+      font-size: 3rem;
+    }
+
+    h3 {
+      text-align: start;
+      font-size: 1.5rem;
+    }
+  }
+  .section {
+    padding-inline: 10rem;
+
+    p {
+      text-align: start;
+      font-size: 1.75rem;
+    }
+  }
+
+  .iconList {
+    .listItem {
+      font-size: 2rem;
+    }
+    .icon {
+      font-size: 2.5rem;
+    }
+  }
+}

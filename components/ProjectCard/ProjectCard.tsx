@@ -1,5 +1,5 @@
 import { Tag } from 'components/shared/Tag'
-import { techTagsMap } from 'constants/TechTagsMap'
+import { TECHS_MAP } from 'constants/TechTagsMap'
 import Link from 'next/link'
 import { FaLaptopCode as CodeIcon, FaLink as VisitIcon } from 'react-icons/fa'
 import { Techs } from 'types/TechTag'
@@ -48,7 +48,7 @@ const ProjectCard = ({
           </div>
           <div className={styles.tagsWrapper}>
             {tags.map((tag, index) => (
-              <Tag key={index} {...techTagsMap[tag]} />
+              <Tag key={index} {...TECHS_MAP[tag]} />
             ))}
           </div>
         </footer>
