@@ -1,6 +1,6 @@
 import { ProjectInfo } from 'types/ProjectInfo'
 
-const projectsData: ProjectInfo[] = [
+const PROJECTS_ENTRIES: ProjectInfo[] = [
   {
     title: 'To-Do: Challenge frontend',
     description:
@@ -22,4 +22,4 @@ const projectsData: ProjectInfo[] = [
   },
 ]
 
-export { projectsData }
+export { PROJECTS_ENTRIES }
