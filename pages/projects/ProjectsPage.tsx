@@ -18,4 +18,4 @@ const ProjectsPage = () => {
     </AnimatePageLayout>
   )
 }
-export { ProjectsPage }
+export default ProjectsPage
